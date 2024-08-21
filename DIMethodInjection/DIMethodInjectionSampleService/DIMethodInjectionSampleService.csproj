@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementations\SampleService.cs" />
-    <Compile Include="Interfaces\ISampleServices.cs" />
+    <Compile Include="Interfaces\ISampleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

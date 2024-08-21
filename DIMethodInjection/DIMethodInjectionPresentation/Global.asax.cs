@@ -1,6 +1,6 @@
 ﻿using DIMethodInjectionPresentation.App_Start;
-using DIMethodInjectionSampleService.Interfaces;
 using DIMethodInjectionSampleService.Implementations;
+using DIMethodInjectionSampleService.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -20,7 +20,7 @@ namespace DIMethodInjectionPresentation
 
             var services = new ServiceCollection();
 
-            services.AddTransient<ISampleServices, SampleService>();
+            services.AddTransient<ISampleService, SampleService>();
 
             ServiceProvider = services.BuildServiceProvider();
 
