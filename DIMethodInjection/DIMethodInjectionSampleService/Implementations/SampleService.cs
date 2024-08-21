@@ -2,7 +2,7 @@
 
 namespace DIMethodInjectionSampleService.Implementations
 {
-    class SampleService : ISampleServices
+    public class SampleService : ISampleServices
     {
         public string GetName()
         {
