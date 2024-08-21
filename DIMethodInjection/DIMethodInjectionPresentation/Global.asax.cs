@@ -1,4 +1,6 @@
 ﻿using DIMethodInjectionPresentation.App_Start;
+using DIMethodInjectionSampleService.Interfaces;
+using DIMethodInjectionSampleService.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -17,6 +19,8 @@ namespace DIMethodInjectionPresentation
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             var services = new ServiceCollection();
+
+            services.AddTransient<ISampleServices, SampleService>();
 
             ServiceProvider = services.BuildServiceProvider();
 
