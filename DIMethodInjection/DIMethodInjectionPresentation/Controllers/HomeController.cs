@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using DIMethodInjectionSampleService.Interfaces;
 using System.Web.Mvc;
 
 namespace DIMethodInjectionPresentation.Controllers
@@ -10,6 +7,8 @@ namespace DIMethodInjectionPresentation.Controllers
     {
         public ActionResult Index()
         {
+            ISampleService _sampleService = (ISampleService)DependencyResolver.Current.GetService(typeof(ISampleService));
+            var myName = _sampleService.GetName();
             return View();
         }
 

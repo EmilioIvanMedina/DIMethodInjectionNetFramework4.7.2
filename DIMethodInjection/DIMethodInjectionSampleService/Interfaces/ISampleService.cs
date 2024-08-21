@@ -1,6 +1,6 @@
 ﻿namespace DIMethodInjectionSampleService.Interfaces
 {
-    public interface ISampleServices
+    public interface ISampleService
     {
         string GetName();
     }
